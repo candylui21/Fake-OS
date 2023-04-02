@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FAKE OS</title>
+        <link rel="stylesheet" href="./styles.css" />
+        <!-- clock script -->
+        <script src="./scipt/clock.js" defer></script>
+        <script src="./scipt/modal.js" defer></script>
+        <script src="./scipt/welcome.js" defer></script>
+        <script src="./scipt/todo.js" defer></script>
+    </head>
+    <nav>
+        <!-- apple menu icon -->
+        <img class="menu" src="./assets/apple.png" />
+
+        <!-- digital clock -->
+        <div id="clock"></div>
+    </nav>
+    <body>
+        <!-- toggle menu -->
+        <div class="menu__toggle">
+            <ul>
+                <li class="menu__toggleItem" id="menu__welcome">Welcome</li>
+                <li class="menu__toggleItem menu__photo" id="menu__photo">
+                    Photos
+                </li>
+
+                <li class="menu__toggleItem" id="menu__todo">Notes</li>
+            </ul>
+        </div>
+        <!-- icons  -->
+        <div class="icon">
+            <img class="icon-img" id="welcomeIcon" src="./assets/clock2.png" />
+            <img class="icon-img" id="todoIcon" src="./assets/note.png" />
+            <img
+                class="openBtn icon-img"
+                id="photoIcon"
+                src="./assets/photo.png"
+            />
+        </div>
+
+        <!-- photo modal -->
+        <div class="modal__container">
+            <div class="modal">
+                <div class="closeBtn-container">
+                    <img
+                        class="closeBtn"
+                        src="./assets/icons8-macos-close-16.png"
+                    />
+                </div>
+                <div class="image-container">
+                    <img class="modal__img" src="./assets/great-day.png" />
+                </div>
+            </div>
+        </div>
+        <!--   welcome modal-->
+        <div class="modal__container" id="modal__container2">
+            <div class="modal" id="modal2">
+                <div class="closeBtn-container" id="closeBtn2">
+                    <img
+                        class="closeBtn"
+                        src="./assets/icons8-macos-close-16.png"
+                    />
+                </div>
+                <div id="greeting__container">
+                    <p id="greeting"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- todo modal  -->
+        <div class="modal__container" id="modal__container3">
+            <div class="modal" id="modal3">
+                <div class="closeBtn-container" id="closeBtn3">
+                    <img
+                        class="closeBtn"
+                        src="./assets/icons8-macos-close-16.png"
+                    />
+                </div>
+                <div class="todo-container">
+                    <p class="todo__title">Notes</p>
+
+                    <input
+                        class="todo__input"
+                        type="text"
+                        id="todoInput"
+                        placeholder="Please enter note here"
+                    />
+                    <button class="todo__btn addBtn">Add Note</button>
+                    <ul class="todo__list" id="todoList"></ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

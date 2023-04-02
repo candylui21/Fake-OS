@@ -1,0 +1,9 @@
+$menu-colour: rgba(241, 243, 243, 0.849);
+$hover-colour: rgba(119, 136, 153, 0.32);
+
+@mixin item-unselectable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

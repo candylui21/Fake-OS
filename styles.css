@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande";
+}
+
+nav {
+  height: 20px;
+  background-color: rgba(241, 243, 243, 0.849);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  padding: 5px;
+}
+
+.menu {
+  height: 15px;
+  width: 15px;
+  padding: 8px 15px;
+}
+.menu.click {
+  border-radius: 2px;
+  background-color: rgba(119, 136, 153, 0.32);
+  border-width: 100%;
+}
+.menu__toggle {
+  margin-top: 30px;
+  margin-left: 5px;
+  width: 200px;
+  background-color: rgba(207, 203, 203, 0.945);
+  box-shadow: 6px 6px 10px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  border: rgba(119, 136, 153, 0.32);
+}
+.menu__toggle.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.menu__toggleItem {
+  padding: 5px;
+  margin: 5px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+}
+
+#menu__photo.hover {
+  border-radius: 4px;
+  background-color: #388cf6;
+  color: white;
+}
+#menu__welcome.hover {
+  border-radius: 4px;
+  background-color: #388cf6;
+  color: white;
+}
+#menu__todo.hover {
+  border-radius: 4px;
+  background-color: #388cf6;
+  color: white;
+}
+
+body {
+  background-image: url(./assets/mac-background.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.icon {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 20px;
+}
+.icon-img {
+  width: 80px;
+  height: 80px;
+  padding: 5px;
+  margin: 1px;
+}
+
+#welcomeIcon {
+  background-color: none;
+}
+#welcomeIcon.open {
+  border: 1px solid rgba(119, 136, 153, 0.32);
+  border-radius: 4px;
+  background-color: rgba(119, 136, 153, 0.32);
+}
+
+#todoIcon {
+  background-color: none;
+}
+#todoIcon.open {
+  border: 1px solid rgba(119, 136, 153, 0.32);
+  border-radius: 4px;
+  background-color: rgba(119, 136, 153, 0.32);
+}
+
+#photoIcon {
+  background-color: none;
+}
+#photoIcon.open {
+  border: 1px solid rgba(119, 136, 153, 0.32);
+  border-radius: 4px;
+  background-color: rgba(119, 136, 153, 0.32);
+}
+
+#clock {
+  width: fit-content;
+  height: fit-content;
+  color: black;
+  font-size: 12px;
+  margin-right: 15px;
+}
+
+.closeBtn-container {
+  width: 100%;
+  background-color: rgba(241, 243, 243, 0.849);
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: #fee0ea;
+  width: 400px;
+  height: 400px;
+  z-index: 1;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 5px solid rgba(241, 243, 243, 0.849);
+}
+.modal__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+}
+.modal__container.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal__img {
+  width: 90%;
+  height: 90%;
+}
+
+#modal__container2 {
+  opacity: 0;
+  pointer-events: none;
+}
+#modal__container2.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#greeting__container {
+  max-height: 100vh;
+  text-align: center;
+  display: flex;
+  padding: 40% 10%;
+}
+
+#modal__container3 {
+  opacity: 0;
+  pointer-events: none;
+}
+#modal__container3.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#modal3 {
+  height: 600px;
+  width: 600px;
+}
+
+.todo__title {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 20%;
+}
+.todo-container {
+  width: 90%;
+  height: 100%;
+}
+.todo__input {
+  margin-top: 10%;
+  margin-left: 10%;
+  width: 50%;
+  padding: 10px;
+}
+.todo__btn {
+  width: 20%;
+  padding: 10px;
+}
+.todo__list {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  list-style-type: none;
+}
+.todo__list.checked {
+  text-decoration: line-through;
+}
+.todo__item {
+  margin-top: 10%;
+  margin-left: 10%;
+  padding-bottom: 5%;
+}
